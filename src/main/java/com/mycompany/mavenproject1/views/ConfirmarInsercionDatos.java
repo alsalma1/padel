@@ -70,6 +70,8 @@ public class ConfirmarInsercionDatos extends javax.swing.JFrame {
     private void bConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bConfirmarActionPerformed
 
         setVisible(false);
+        GestionPistas gestionPistas = new GestionPistas();
+        gestionPistas.setVisible(true);
     }//GEN-LAST:event_bConfirmarActionPerformed
 
     /**

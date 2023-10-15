@@ -167,7 +167,7 @@ public class GestionPistas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bAddPistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAddPistaActionPerformed
-       Pista.addPista();
+       Pista.addPista(GestionPistas.this);
        DefaultTableModel modelo = new DefaultTableModel();
        ArrayList<Pista> pistas = null;
        try {
@@ -182,8 +182,6 @@ public class GestionPistas extends javax.swing.JFrame {
         }
        Container.setVisible(false);
        Container.setVisible(true);
-       
-
     }//GEN-LAST:event_bAddPistaActionPerformed
 
     private void bSalirGestionPistasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSalirGestionPistasActionPerformed

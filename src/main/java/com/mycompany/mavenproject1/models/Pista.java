@@ -5,6 +5,7 @@ import com.mycompany.mavenproject1.config.Conexion;
 import java.sql.Connection;
 import javax.swing.SwingWorker;
 import com.mycompany.mavenproject1.views.ConfirmarInsercionDatos;
+import com.mycompany.mavenproject1.views.GestionPistas;
 public class Pista {
     private int id_pista;
     private String estado;
@@ -76,7 +77,7 @@ public class Pista {
             }
         }
         
-    public static void addPista() {
+    public static void addPista(GestionPistas gestionPistas) {
         SwingWorker<Void, Void> worker = new SwingWorker<Void, Void>() {
             @Override
             protected Void doInBackground() throws Exception {
@@ -95,8 +96,9 @@ public class Pista {
                     connection.close();
                     ConfirmarInsercionDatos viewConfirmarDatos = new ConfirmarInsercionDatos();
                     if (filasAfectadas > 0) {
+                        gestionPistas.setVisible(false);
                         viewConfirmarDatos.setVisible(true);
-                        ConfirmarInsercionDatos.labelConfirmar.setText("CORRECT");
+                        ConfirmarInsercionDatos.labelConfirmar.setText("Se ha insertado la pista correctamente!");
                     } else {
                         viewConfirmarDatos.setVisible(true);
                         ConfirmarInsercionDatos.labelConfirmar.setText("ERROR");
