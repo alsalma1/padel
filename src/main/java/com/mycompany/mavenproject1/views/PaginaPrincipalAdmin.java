@@ -123,8 +123,8 @@ public class PaginaPrincipalAdmin extends javax.swing.JFrame {
     private void bGestionPistasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGestionPistasActionPerformed
         GestionPistas gestionPistas = new GestionPistas();
         gestionPistas.setVisible(true);
-        PaginaPrincipalAdmin paginaPrincipal = new PaginaPrincipalAdmin();
-        paginaPrincipal.setVisible(false);
+        //PaginaPrincipalAdmin paginaPrincipal = new PaginaPrincipalAdmin();
+        this.setVisible(false);
     }//GEN-LAST:event_bGestionPistasActionPerformed
 
     private void btnGestionarUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGestionarUsuariosActionPerformed

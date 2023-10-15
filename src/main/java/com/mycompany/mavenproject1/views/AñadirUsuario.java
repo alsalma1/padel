@@ -26,6 +26,16 @@ public class AñadirUsuario extends javax.swing.JFrame {
         //setExtendedState(JFrame.MAXIMIZED_BOTH);
         setLocationRelativeTo(null);
     }
+    
+    private void limpiarCampos() {
+        fieldNombre.setText("");
+        fieldApellido.setText("");
+        fieldDni.setText("");
+        fieldEmail.setText("");
+        fieldTelefono.setText("");
+        boxSocio.setSelectedIndex(0);
+        fieldFecha.setDate(null);
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -297,6 +307,7 @@ public class AñadirUsuario extends javax.swing.JFrame {
             }
             else{
                 appController.añadirUsuario(nombre, apellido, dni, email, telef, socio, fecha, this);
+                limpiarCampos();
             }
         }
     }//GEN-LAST:event_btnAñadirActionPerformed
